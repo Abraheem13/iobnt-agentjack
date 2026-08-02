@@ -215,3 +215,24 @@ def test_synthetic_cgm_has_the_canonical_schema():
     assert df.patient_id.nunique() == 3
     assert df.glucose_mmol_l.between(2.0, 25.0).all()
     assert (df.groupby("patient_id").meal_carbs_g.sum() > 0).all()
+
+
+def test_cgm_units_are_detected_not_assumed():
+    """Shanghai records mg/dL; the twin works in mmol/L. Loading without
+    conversion would put a normal 110 mg/dL reading in as 110 mmol/L - the agent
+    would dose at maximum every cycle and every attack number would be garbage,
+    while every gate still passed."""
+    from agentjack.data.loaders.cgm import _to_mmol
+
+    v, unit = _to_mmol(np.array([70.0, 110.0, 180.0]), "t")
+    assert unit == "mg/dL" and v.max() < 12.0
+
+    v, unit = _to_mmol(np.array([3.9, 6.1, 10.0]), "t")
+    assert unit == "mmol/L" and np.allclose(v, [3.9, 6.1, 10.0])
+
+
+def test_implausible_glucose_is_refused_not_guessed():
+    from agentjack.data.loaders.cgm import _to_mmol
+
+    with pytest.raises(ValueError, match="Refusing to guess"):
+        _to_mmol(np.array([10000.0, 20000.0]), "t")
