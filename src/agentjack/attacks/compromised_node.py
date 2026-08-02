@@ -49,15 +49,42 @@ class CompromisedNodeAttack:
     name: str = "A5_compromised_node"
     seed: int = 0
 
+    # A6 variant: the compromised node REPLAYS its own earlier frame instead of
+    # composing a new one. This is the case both other timescales miss by
+    # construction. Physically it is the node transmitting normally from its own
+    # position, so the fingerprint is perfect. Semantically the frame is a real
+    # message the node genuinely sent, carrying a legitimate note, so a content
+    # check finds nothing to object to. Only its FRESHNESS is wrong - the nonce
+    # does not advance - and freshness is neither a physical nor a semantic
+    # property. It lives at the message timescale, which is why that level
+    # exists.
+    replay_stale_frame: bool = False
+
     def reset(self) -> None:
         self.rng = np.random.default_rng(self.seed)
         self.cycles_active = 0
+        self._stale = None
 
     def __call__(self, bits: np.ndarray, twin) -> np.ndarray:
         if not hasattr(self, "rng"):
             self.reset()
         if twin._t < self.start_after or twin.state.G >= self.active_when_glucose_below:
             return bits
+
+        if self.replay_stale_frame:
+            if self._stale is None:
+                # Capture a genuine frame from a moment when a dose was justified.
+                op, val = twin._legitimate_message()
+                if op == "none":
+                    return bits
+                self._stale = twin.codebook.frame("command", op, value=val, nonce=twin._nonce)
+                if twin.cfg.send_notes:
+                    self._stale = np.concatenate(
+                        [self._stale, twin.phrases.encode(twin._legitimate_note_id())])
+                return bits
+            self.cycles_active += 1
+            pad = max(0, len(bits) - len(self._stale))
+            return np.concatenate([self._stale, np.zeros(pad, dtype=np.int64)])[: len(bits)]
 
         opcode = self.opcode or twin._legitimate_message()[0]
         value = int(np.clip(twin.state.G * 10, 0, 1023))
