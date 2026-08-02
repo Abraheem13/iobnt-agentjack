@@ -1,19 +1,19 @@
 {
   "L0": {
-    "fpr": 0.03125,
-    "A1 replay": 0.8854166666666666,
-    "A2 spoofing": 0.96875,
-    "A3 ISI-exploit": 0.75,
-    "A4 semantic": 1.0,
-    "A5 compromised node": 0.03125,
-    "A6 insider replay": 0.03125
+    "fpr": 0.052083333333333336,
+    "A1 replay": 0.890625,
+    "A2 spoofing": 0.9635416666666666,
+    "A3 ISI-exploit": 0.78125,
+    "A4 semantic": 0.9895833333333334,
+    "A5 compromised node": 0.041666666666666664,
+    "A6 insider replay": 0.005208333333333333
   },
   "L1": {
     "fpr": 0.0,
     "A1 replay": 0.90625,
     "A2 spoofing": 0.0,
-    "A3 ISI-exploit": 0.4375,
-    "A4 semantic": 0.0,
+    "A3 ISI-exploit": 0.4166666666666667,
+    "A4 semantic": 0.020833333333333332,
     "A5 compromised node": 0.0,
     "A6 insider replay": 0.90625
   },
@@ -22,42 +22,42 @@
     "A1 replay": 0.0,
     "A2 spoofing": 0.0,
     "A3 ISI-exploit": 0.020833333333333332,
-    "A4 semantic": 1.0,
+    "A4 semantic": 0.9895833333333334,
     "A5 compromised node": 1.0,
     "A6 insider replay": 0.0
   },
   "L0+L1": {
-    "fpr": 0.03125,
+    "fpr": 0.052083333333333336,
     "A1 replay": 0.9375,
-    "A2 spoofing": 0.96875,
-    "A3 ISI-exploit": 0.8125,
-    "A4 semantic": 1.0,
-    "A5 compromised node": 0.03125,
+    "A2 spoofing": 0.9635416666666666,
+    "A3 ISI-exploit": 0.8489583333333334,
+    "A4 semantic": 0.9895833333333334,
+    "A5 compromised node": 0.041666666666666664,
     "A6 insider replay": 0.90625
   },
   "L0+L2": {
-    "fpr": 0.03125,
-    "A1 replay": 0.8854166666666666,
-    "A2 spoofing": 0.96875,
-    "A3 ISI-exploit": 0.75,
+    "fpr": 0.052083333333333336,
+    "A1 replay": 0.890625,
+    "A2 spoofing": 0.9635416666666666,
+    "A3 ISI-exploit": 0.78125,
     "A4 semantic": 1.0,
     "A5 compromised node": 1.0,
-    "A6 insider replay": 0.03125
+    "A6 insider replay": 0.005208333333333333
   },
   "L1+L2": {
     "fpr": 0.0,
     "A1 replay": 0.90625,
     "A2 spoofing": 0.0,
-    "A3 ISI-exploit": 0.4375,
+    "A3 ISI-exploit": 0.4166666666666667,
     "A4 semantic": 1.0,
     "A5 compromised node": 1.0,
     "A6 insider replay": 0.90625
   },
   "L0+L1+L2": {
-    "fpr": 0.03125,
+    "fpr": 0.052083333333333336,
     "A1 replay": 0.9375,
-    "A2 spoofing": 0.96875,
-    "A3 ISI-exploit": 0.8125,
+    "A2 spoofing": 0.9635416666666666,
+    "A3 ISI-exploit": 0.8489583333333334,
     "A4 semantic": 1.0,
     "A5 compromised node": 1.0,
     "A6 insider replay": 0.90625

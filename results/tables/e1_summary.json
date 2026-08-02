@@ -1,22 +1,54 @@
 {
+  "A1_replay|blind": {
+    "unsafe_mean": 0.0006510416666666666,
+    "n": 10
+  },
+  "A1_replay|full_cir": {
+    "unsafe_mean": 0.27838541666666666,
+    "n": 10
+  },
   "A1_replay|statistical": {
-    "unsafe_mean": 0.4078525641025641,
-    "n": 13
+    "unsafe_mean": 0.27083333333333337,
+    "n": 10
+  },
+  "A2_spoofing|blind": {
+    "unsafe_mean": 0.0014322916666666666,
+    "n": 10
+  },
+  "A2_spoofing|full_cir": {
+    "unsafe_mean": 0.25924479166666664,
+    "n": 10
   },
   "A2_spoofing|statistical": {
-    "unsafe_mean": 0.4059495192307692,
-    "n": 13
+    "unsafe_mean": 0.25247395833333336,
+    "n": 10
+  },
+  "A3_isi_exploit|blind": {
+    "unsafe_mean": 0.0,
+    "n": 10
+  },
+  "A3_isi_exploit|full_cir": {
+    "unsafe_mean": 0.09622395833333333,
+    "n": 10
   },
   "A3_isi_exploit|statistical": {
-    "unsafe_mean": 0.160556891025641,
-    "n": 13
+    "unsafe_mean": 0.10182291666666665,
+    "n": 10
+  },
+  "A4_semantic|blind": {
+    "unsafe_mean": 0.0,
+    "n": 10
+  },
+  "A4_semantic|full_cir": {
+    "unsafe_mean": 0.0,
+    "n": 10
   },
   "A4_semantic|statistical": {
     "unsafe_mean": 0.0,
-    "n": 13
+    "n": 10
   },
   "none|statistical": {
     "unsafe_mean": 0.0,
-    "n": 13
+    "n": 10
   }
 }
