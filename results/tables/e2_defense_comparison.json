@@ -1,0 +1,162 @@
+{
+  "none|none": {
+    "unsafe_mean": 0.0,
+    "tir_mean": 0.90625,
+    "veto_mean": 0.0
+  },
+  "none|D1_physical": {
+    "unsafe_mean": 0.0,
+    "tir_mean": 0.9039351851851851,
+    "veto_mean": 0.04861111111111111
+  },
+  "none|D2_semantic": {
+    "unsafe_mean": 0.0,
+    "tir_mean": 0.90625,
+    "veto_mean": 0.0
+  },
+  "none|D3_nested": {
+    "unsafe_mean": 0.0,
+    "tir_mean": 0.9131944444444444,
+    "veto_mean": 0.08217592592592593
+  },
+  "A1_replay|none": {
+    "unsafe_mean": 0.6076388888888888,
+    "tir_mean": 0.2673611111111111,
+    "veto_mean": 0.0
+  },
+  "A1_replay|D1_physical": {
+    "unsafe_mean": 0.0,
+    "tir_mean": 0.9189814814814815,
+    "veto_mean": 0.5150462962962963
+  },
+  "A1_replay|D2_semantic": {
+    "unsafe_mean": 0.6076388888888888,
+    "tir_mean": 0.2673611111111111,
+    "veto_mean": 0.0
+  },
+  "A1_replay|D3_nested": {
+    "unsafe_mean": 0.0,
+    "tir_mean": 0.9108796296296295,
+    "veto_mean": 0.46643518518518523
+  },
+  "A2_spoofing|none": {
+    "unsafe_mean": 0.6145833333333335,
+    "tir_mean": 0.2361111111111111,
+    "veto_mean": 0.0
+  },
+  "A2_spoofing|D1_physical": {
+    "unsafe_mean": 0.0,
+    "tir_mean": 0.9282407407407407,
+    "veto_mean": 0.6631944444444444
+  },
+  "A2_spoofing|D2_semantic": {
+    "unsafe_mean": 0.6145833333333335,
+    "tir_mean": 0.2361111111111111,
+    "veto_mean": 0.0
+  },
+  "A2_spoofing|D3_nested": {
+    "unsafe_mean": 0.0,
+    "tir_mean": 0.8981481481481483,
+    "veto_mean": 0.7499999999999999
+  },
+  "A3_isi_exploit|none": {
+    "unsafe_mean": 0.22916666666666666,
+    "tir_mean": 0.6157407407407408,
+    "veto_mean": 0.0
+  },
+  "A3_isi_exploit|D1_physical": {
+    "unsafe_mean": 0.0,
+    "tir_mean": 0.9432870370370371,
+    "veto_mean": 0.611111111111111
+  },
+  "A3_isi_exploit|D2_semantic": {
+    "unsafe_mean": 0.21412037037037035,
+    "tir_mean": 0.6342592592592592,
+    "veto_mean": 0.01273148148148148
+  },
+  "A3_isi_exploit|D3_nested": {
+    "unsafe_mean": 0.0,
+    "tir_mean": 0.9282407407407407,
+    "veto_mean": 0.6921296296296295
+  },
+  "A4_semantic|none": {
+    "unsafe_mean": 0.0,
+    "tir_mean": 0.90625,
+    "veto_mean": 0.0
+  },
+  "A4_semantic|D1_physical": {
+    "unsafe_mean": 0.0,
+    "tir_mean": 0.9155092592592593,
+    "veto_mean": 0.7233796296296297
+  },
+  "A4_semantic|D2_semantic": {
+    "unsafe_mean": 0.0,
+    "tir_mean": 0.9131944444444444,
+    "veto_mean": 0.7534722222222222
+  },
+  "A4_semantic|D3_nested": {
+    "unsafe_mean": 0.0,
+    "tir_mean": 0.8587962962962963,
+    "veto_mean": 0.7974537037037037
+  },
+  "A5_compromised_node|none": {
+    "unsafe_mean": 0.0,
+    "tir_mean": 0.90625,
+    "veto_mean": 0.0
+  },
+  "A5_compromised_node|D1_physical": {
+    "unsafe_mean": 0.0,
+    "tir_mean": 0.9074074074074076,
+    "veto_mean": 0.06944444444444445
+  },
+  "A5_compromised_node|D2_semantic": {
+    "unsafe_mean": 0.0,
+    "tir_mean": 0.9131944444444444,
+    "veto_mean": 0.7511574074074073
+  },
+  "A5_compromised_node|D3_nested": {
+    "unsafe_mean": 0.0,
+    "tir_mean": 0.8923611111111112,
+    "veto_mean": 0.7696759259259259
+  },
+  "A6_insider_replay|none": {
+    "unsafe_mean": 0.5624999999999999,
+    "tir_mean": 0.3194444444444444,
+    "veto_mean": 0.0
+  },
+  "A6_insider_replay|D1_physical": {
+    "unsafe_mean": 0.5416666666666665,
+    "tir_mean": 0.3344907407407407,
+    "veto_mean": 0.02662037037037037
+  },
+  "A6_insider_replay|D2_semantic": {
+    "unsafe_mean": 0.5624999999999999,
+    "tir_mean": 0.3194444444444444,
+    "veto_mean": 0.0
+  },
+  "A6_insider_replay|D3_nested": {
+    "unsafe_mean": 0.0,
+    "tir_mean": 0.8726851851851851,
+    "veto_mean": 0.7106481481481483
+  },
+  "A7_adaptive_insider|none": {
+    "unsafe_mean": 0.0,
+    "tir_mean": 1.0,
+    "veto_mean": 0.0
+  },
+  "A7_adaptive_insider|D1_physical": {
+    "unsafe_mean": 0.0,
+    "tir_mean": 0.9965277777777778,
+    "veto_mean": 0.05324074074074074
+  },
+  "A7_adaptive_insider|D2_semantic": {
+    "unsafe_mean": 0.0,
+    "tir_mean": 0.9085648148148149,
+    "veto_mean": 0.2175925925925926
+  },
+  "A7_adaptive_insider|D3_nested": {
+    "unsafe_mean": 0.0,
+    "tir_mean": 0.9097222222222222,
+    "veto_mean": 0.2858796296296296
+  }
+}
