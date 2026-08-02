@@ -1,0 +1,12 @@
+name: llm_orchestrator
+# REALISM demonstrator: shows the threat holds for a real LLM agent.
+type: llm
+model: Qwen/Qwen2.5-7B-Instruct    # pin exact revision on Day 6
+revision: null
+dtype: bfloat16
+max_new_tokens: 256
+temperature: 0.0                    # greedy for reproducibility
+top_p: 1.0
+prompt_version: v1
+tool_schema: default
+context_slots: 32

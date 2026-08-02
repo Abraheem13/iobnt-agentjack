@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this software or benchmark, please cite the paper below."
+title: "IoBNT-AgentJack: a benchmark for molecular prompt injection against agentic bio-cyber interfaces"
+version: 0.1.0
+license: MIT
+authors:
+  - family-names: Rashid
+    given-names: Abraheem
+preferred-citation:
+  type: article
+  title: "Molecular Prompt Injection: Hijacking Agentic Bio-Cyber Interfaces and a Nested Multi-Timescale Trust Monitor for the Internet of Bio-Nano Things"
+  authors:
+    - family-names: Rashid
+      given-names: Abraheem
+  year: 2026
+  journal: "IEEE Transactions on Molecular, Biological, and Multi-Scale Communications (under review)"

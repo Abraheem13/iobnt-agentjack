@@ -1,0 +1,11 @@
+name: e2_defense_comparison
+purpose: HEADLINE 2 - does the nested monitor beat single-timescale defenses?
+grid:
+  channel: [testbed_calibrated]
+  task: [glycemic_control]
+  agent: [policy_gru, llm_orchestrator]
+  attack: [replay, spoofing, isi_exploit, semantic_injection, adaptive]
+  defense: [none, pla_cir, llm_guardrail, nested_trust_monitor]
+seeds: 10
+primary_metric: unsafe_actuation_rate
+secondary_metrics: [detection_auroc, benign_task_success, detection_latency_slots, false_positive_rate]

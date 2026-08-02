@@ -1,0 +1,6 @@
+name: pla_cir
+type: D1_physical_layer_authentication
+estimator: preamble_ls
+preamble_slots: 8
+distance: normalised_l2
+target_fpr: 0.05               # thresholds calibrated on benign runs only

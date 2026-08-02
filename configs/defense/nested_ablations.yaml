@@ -1,0 +1,12 @@
+name: nested_ablations
+_inherit: nested_trust_monitor
+# Each variant removes one timescale. The claim is that no single level
+# covers all four attack classes - this file generates that evidence.
+variants:
+  - {id: L0_only,   levels: [0]}
+  - {id: L1_only,   levels: [1]}
+  - {id: L2_only,   levels: [2]}
+  - {id: L0_L1,     levels: [0, 1]}
+  - {id: L0_L2,     levels: [0, 2]}
+  - {id: L1_L2,     levels: [1, 2]}
+  - {id: full,      levels: [0, 1, 2]}

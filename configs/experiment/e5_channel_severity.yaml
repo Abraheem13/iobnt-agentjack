@@ -1,0 +1,7 @@
+name: e5_channel_severity
+purpose: does the result survive across ISI severity and counting SNR?
+grid:
+  channel: [severity_sweep]
+  attack: [isi_exploit, semantic_injection]
+  defense: [none, pla_cir, llm_guardrail, nested_trust_monitor]
+seeds: 5

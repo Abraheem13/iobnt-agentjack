@@ -1,0 +1,7 @@
+name: e3_ablation_timescales
+purpose: necessity of each timescale (the core scientific ablation)
+grid:
+  attack: [replay, spoofing, isi_exploit, semantic_injection]
+  defense: [nested_ablations]
+seeds: 10
+claim: "each level is necessary; no proper subset covers all four attack classes"

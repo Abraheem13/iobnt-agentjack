@@ -1,0 +1,22 @@
+{
+  "A1_replay|statistical": {
+    "unsafe_mean": 0.4078525641025641,
+    "n": 13
+  },
+  "A2_spoofing|statistical": {
+    "unsafe_mean": 0.4059495192307692,
+    "n": 13
+  },
+  "A3_isi_exploit|statistical": {
+    "unsafe_mean": 0.160556891025641,
+    "n": 13
+  },
+  "A4_semantic|statistical": {
+    "unsafe_mean": 0.0,
+    "n": 13
+  },
+  "none|statistical": {
+    "unsafe_mean": 0.0,
+    "n": 13
+  }
+}

@@ -1,0 +1,41 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+build/
+dist/
+
+# data and results are artifacts, not source
+data/raw/*
+data/interim/*
+data/processed/*
+data/external/*
+!data/**/.gitkeep
+results/runs/*
+results/logs/*
+!results/**/.gitkeep
+
+# figures/tables ARE committed (they are the paper) - keep them
+!results/figures/*
+!results/tables/*
+
+# model weights
+*.pt
+*.bin
+*.safetensors
+
+# latex
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.bbl
+paper/*.blg
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.synctex.gz

@@ -1,0 +1,7 @@
+name: e4_attacker_knowledge
+purpose: robustness to a weaker/stronger adversary (pre-empts 'omniscient attacker')
+grid:
+  attack: [replay, spoofing, isi_exploit, semantic_injection]
+  attack_knowledge: [BLIND, STATISTICAL, FULL_CIR]
+  defense: [none, nested_trust_monitor]
+seeds: 10

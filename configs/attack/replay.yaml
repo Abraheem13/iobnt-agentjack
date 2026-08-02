@@ -1,0 +1,6 @@
+name: replay
+type: A1_molecular_replay
+knowledge: STATISTICAL         # BLIND | STATISTICAL | FULL_CIR
+capture_window_slots: 64
+replay_delay_slots: [4, 16, 64]
+symbol_budget_bits: 32

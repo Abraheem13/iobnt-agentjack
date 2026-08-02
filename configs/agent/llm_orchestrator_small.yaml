@@ -1,0 +1,4 @@
+name: llm_orchestrator_small
+_inherit: llm_orchestrator
+model: Qwen/Qwen2.5-3B-Instruct
+# Second model = 'not an artefact of one LLM' robustness check.

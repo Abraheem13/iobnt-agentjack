@@ -1,0 +1,9 @@
+name: diffusion_3d
+# 3-D free diffusion, fully-absorbing spherical receiver.
+D: 79.4e-12          # m^2/s, diffusion coefficient
+r_rx: 5.0e-6         # m, receiver radius
+d_tx_rx: 20.0e-6     # m, transmitter-receiver separation
+T_s: 0.5             # s, symbol duration (0.71 x characteristic diffusion time)
+n_molecules: 8000    # released per '1' symbol (chosen for frame success, Gate 2)
+isi_memory_L: 8      # slots retained in the ISI tail
+background_rate: 0.0

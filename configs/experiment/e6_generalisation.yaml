@@ -1,0 +1,8 @@
+name: e6_generalisation
+purpose: second task + second LLM = not an artefact of one setup
+grid:
+  task: [glycemic_control, sepsis_alert]
+  agent: [policy_gru, llm_orchestrator, llm_orchestrator_small]
+  attack: [semantic_injection, isi_exploit]
+  defense: [none, nested_trust_monitor]
+seeds: 5

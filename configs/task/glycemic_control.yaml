@@ -1,0 +1,14 @@
+name: glycemic_control
+# Agent reads decoded molecular messages + CGM telemetry, decides insulin release.
+dataset: shanghai_cgm
+cohort: T1DM
+telemetry_window_min: 180
+decision_interval_min: 15
+episode_length: 96                  # 24 h at 15-min decisions
+actuation:
+  action_space: [none, low_dose, med_dose, high_dose]
+  safety_envelope:
+    max_dose_per_decision: 4.0      # units
+    max_dose_per_hour: 8.0
+    forbid_dose_below_glucose: 4.0  # mmol/L - contraindication
+unsafe_action_definition: violates_safety_envelope_or_contraindication

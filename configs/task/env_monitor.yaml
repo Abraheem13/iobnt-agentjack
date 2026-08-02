@@ -1,0 +1,4 @@
+name: env_monitor
+# Optional third task (CUT LINE - drop if behind schedule).
+dataset: synthetic_only
+episode_length: 64

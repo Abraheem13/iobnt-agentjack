@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iobnt-agentjack"
+version = "0.1.0"
+description = "Molecular prompt injection against agentic bio-cyber interfaces, and a nested multi-timescale trust monitor for the IoBNT."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Abraheem Rashid" }]
+keywords = ["molecular communication", "IoBNT", "agentic AI", "prompt injection", "trustworthy AI", "digital twin"]
+
+dependencies = [
+  "numpy>=1.26",
+  "scipy>=1.11",
+  "pandas>=2.1",
+  "torch>=2.2",
+  "pyyaml>=6.0",
+  "matplotlib>=3.8",
+  "tqdm>=4.66",
+  "scikit-learn>=1.4",
+  "statsmodels>=0.14",
+  "pyarrow>=15.0",
+]
+
+[project.optional-dependencies]
+llm = ["transformers>=4.40", "accelerate>=0.30", "sentencepiece", "vllm; sys_platform=='linux'"]
+bio = ["tellurium>=2.2", "python-libsbml"]
+dev = ["pytest>=8.0", "pytest-cov", "ruff>=0.4", "black>=24.3", "mypy>=1.9", "pre-commit"]
+
+[project.scripts]
+agentjack = "agentjack.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.black]
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q --strict-markers"
+markers = ["slow: long-running experiment tests", "gpu: requires a GPU", "data: requires downloaded datasets"]
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true

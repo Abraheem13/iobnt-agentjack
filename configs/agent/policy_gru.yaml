@@ -1,0 +1,11 @@
+name: policy_gru
+# PRIMARY quantitative agent: fully reproducible, used for all headline numbers.
+type: policy_controller
+hidden_size: 128
+num_layers: 2
+context_slots: 32
+train:
+  episodes: 5000
+  lr: 3.0e-4
+  batch_size: 64
+  early_stop_patience: 20

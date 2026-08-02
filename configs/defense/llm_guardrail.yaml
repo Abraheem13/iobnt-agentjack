@@ -1,0 +1,5 @@
+name: llm_guardrail
+type: D2_input_sanitisation
+detector: classifier            # classifier | llm_judge | rule_based
+threshold: 0.5
+target_fpr: 0.05

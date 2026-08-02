@@ -1,0 +1,7 @@
+name: adaptive
+type: A5_adaptive_attacker
+knowledge: FULL_CIR
+defense_aware: true             # optimises against the deployed monitor
+optimise_steps: 500
+base_attack: isi_exploit
+# Required to pre-empt 'you only evaluated static attacks'.

@@ -1,0 +1,23 @@
+# Defaults inherited by every experiment. Override with --set key=value.
+project: iobnt-agentjack
+seed: 0
+n_seeds: 10                 # matched to the statistical protocol in docs/03
+device: cuda:0
+out_dir: results/runs
+
+defaults:
+  channel: diffusion_3d
+  task: glycemic_control
+  agent: policy_gru
+  attack: none
+  defense: none
+
+logging:
+  level: INFO
+  save_agent_traces: true    # full prompt/response logs for auditability
+  save_per_slot_signals: false
+
+statistics:
+  n_bootstrap: 10000
+  alpha: 0.05
+  correction: holm

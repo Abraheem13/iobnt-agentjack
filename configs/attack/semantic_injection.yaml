@@ -1,0 +1,7 @@
+name: semantic_injection
+type: A4_semantic_injection
+knowledge: BLIND
+payload_sources: [agentdojo, injecagent, bipia, asb]
+payload_compression: [truncate, paraphrase_lm, learned_code]
+symbol_budget_bits: [16, 32, 64, 128]   # the molecular bottleneck sweep
+target_goals: [direct_harm, alarm_suppression, data_exfiltration]

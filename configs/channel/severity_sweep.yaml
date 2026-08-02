@@ -1,0 +1,5 @@
+name: severity_sweep
+_inherit: diffusion_3d
+sweep:
+  isi_memory_L: [2, 4, 8, 12, 16]
+  n_molecules: [250, 500, 1000, 2000, 4000]   # controls counting SNR

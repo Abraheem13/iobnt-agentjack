@@ -1,0 +1,20 @@
+name: nested_trust_monitor
+type: D3_nested_multitimescale       # THE CONTRIBUTION
+levels:
+  - id: 0
+    name: physical
+    update_every_slots: 1            # FAST
+    features: [cir_residual, counting_statistics, energy]
+  - id: 1
+    name: message
+    update_every_slots: 32           # MEDIUM
+    features: [symbol_sequence_likelihood, freshness_nonce, decode_confidence]
+  - id: 2
+    name: semantic
+    update_every_slots: 256          # SLOW
+    features: [command_prior_divergence, behavioural_drift, task_consistency]
+fusion:
+  method: weighted_divergence        # see defenses/divergence.py
+  weights: auto                      # calibrated on benign runs
+  target_fpr: 0.05
+attribution: true                    # explainability output

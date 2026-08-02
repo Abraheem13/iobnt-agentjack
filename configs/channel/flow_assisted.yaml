@@ -1,0 +1,4 @@
+name: flow_assisted
+_inherit: diffusion_3d
+v_flow: 1.0e-4       # m/s bulk drift
+isi_memory_L: 5

@@ -1,0 +1,44 @@
+{
+  "seed": 0,
+  "episodes": 40,
+  "epochs": 15,
+  "n_steps": 3840,
+  "action_balance": {
+    "none": 0.9177083333333333,
+    "low_dose": 0.075,
+    "med_dose": 0.00234375,
+    "high_dose": 0.0049479166666666664
+  },
+  "final_val_acc": 1.0,
+  "final_val_recall": {
+    "none": 1.0,
+    "low_dose": 1.0,
+    "med_dose": 1.0,
+    "high_dose": 1.0
+  },
+  "train_patients": [
+    "SYN_000",
+    "SYN_001",
+    "SYN_002",
+    "SYN_003",
+    "SYN_004",
+    "SYN_005",
+    "SYN_006",
+    "SYN_007"
+  ],
+  "test_patients": [
+    "SYN_008",
+    "SYN_009",
+    "SYN_010",
+    "SYN_011"
+  ],
+  "cgm_is_real": false,
+  "device": {
+    "python": "3.12.3",
+    "platform": "Linux-6.18.5-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "device": "cpu",
+    "torch": "2.13.0+cu130",
+    "accelerator_name": null
+  }
+}

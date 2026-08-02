@@ -1,0 +1,6 @@
+name: testbed_calibrated
+# Parameters FITTED to real hardware traces - do not hand-edit.
+# Produced by: python -m agentjack.channel.calibrate --dataset macroscale_ethanol
+_inherit: diffusion_3d
+calibrated_from: macroscale_ethanol
+params_file: data/processed/calibration/macroscale_ethanol.json
