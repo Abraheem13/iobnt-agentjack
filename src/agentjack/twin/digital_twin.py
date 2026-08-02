@@ -176,6 +176,7 @@ class BioCyberTwin:
         self._history = [self.state.G] * self.cfg.telemetry_window
         self._last_counts = None
         self._last_clean_counts = None
+        self._last_decoded_bits = None
         if self.attacker is not None and hasattr(self.attacker, "reset"):
             self.attacker.reset()
         return self._observe()
@@ -240,6 +241,10 @@ class BioCyberTwin:
             counts = counts + adversarial
         self._last_counts = counts.copy()
         decoded_bits = self.detector.detect(counts)
+        # Retained for the physical-layer defense: it reconstructs the expected
+        # count profile from what it DECODED, never from ground truth. A defense
+        # given the true transmission would be an oracle, not a defense.
+        self._last_decoded_bits = decoded_bits.copy()
         n_note = len(note_bits)
         msg, start = self._scan_for_frame(decoded_bits, n_note)
         intact = bool(start == 0 and np.array_equal(
