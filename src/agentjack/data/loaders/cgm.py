@@ -84,73 +84,104 @@ def load_shanghai(root: str | Path = "data/raw/shanghai_cgm", cohort: str = "T1D
     files = sorted(p for p in root.rglob("*.xls*")
                    if cohort.lower() in str(p).lower() or not any(
                        c.lower() in str(p).lower() for c in ("t1dm", "t2dm")))
-    files = [p for p in files if not p.name.startswith("~$")]
+    files = [p for p in files if not p.name.startswith("~$")
+             and "summary" not in p.stem.lower()]
     if not files:
         raise DataNotAvailable(
             f"{root} exists but holds no .xls/.xlsx patient files for {cohort}. "
             f"Found: {[p.name for p in list(root.rglob('*'))[:5]]}"
         )
 
+    # Patient files are named <patient>_<visit>_<date>.xls[x], e.g.
+    # "1002_0_20210504.xls" and "1002_1_20210521.xls" are the SAME patient's
+    # first and second hospital visits, per the source paper (Zhao et al. 2023):
+    # "for one patient, there might be multiple periods of CGM recordings due to
+    # different visits". Grouping by filename prefix keeps that person as one
+    # patient_id with one combined timeline, rather than as two unrelated
+    # synthetic patients - which would silently inflate the reported cohort size
+    # (12 T1DM became 16 files; 100 T2DM became 109) and would let one person's
+    # glucose autocorrelation appear as if it were two independent patients if
+    # visits landed on opposite sides of a patient-level train/test split.
+    import re
+
+    def parse_name(path: Path) -> tuple[str, int]:
+        m = re.match(r"(\d+)_(\d+)_", path.stem)
+        if m:
+            return m.group(1), int(m.group(2))
+        return path.stem, 0
+
+    groups: dict[str, list[Path]] = {}
+    for f in files:
+        pid, _ = parse_name(f)
+        groups.setdefault(pid, []).append(f)
+    for pid in groups:
+        groups[pid].sort(key=lambda p: parse_name(p)[1])
+
     frames, skipped, units_seen = [], [], set()
-    for i, f in enumerate(files):
-        try:
-            df = pd.read_excel(f)
-        except Exception as e:  # noqa: BLE001
-            skipped.append((f.name, f"unreadable: {e}"))
-            continue
+    for pid, visit_files in groups.items():
+        visit_frames = []
+        t_offset = 0.0
+        for f in visit_files:
+            try:
+                df = pd.read_excel(f)
+            except Exception as e:  # noqa: BLE001
+                skipped.append((f.name, f"unreadable: {e}"))
+                continue
 
-        cols = {str(c).lower().strip(): c for c in df.columns}
+            cols = {str(c).lower().strip(): c for c in df.columns}
 
-        def find(*keywords, exclude=()):
-            for lc, orig in cols.items():
-                if any(k in lc for k in keywords) and not any(x in lc for x in exclude):
-                    return orig
-            return None
+            def find(*keywords, exclude=()):
+                for lc, orig in cols.items():
+                    if any(k in lc for k in keywords) and not any(x in lc for x in exclude):
+                        return orig
+                return None
 
-        # Prefer the continuous monitor over fingerstick readings.
-        gcol = find("cgm") or find("glucose", exclude=("cbg",)) or find("cbg")
-        tcol = find("date", "time")
-        if gcol is None or tcol is None:
-            skipped.append((f.name, f"no glucose/time column in {list(df.columns)[:6]}"))
-            continue
+            gcol = find("cgm") or find("glucose", exclude=("cbg",)) or find("cbg")
+            tcol = find("date", "time")
+            if gcol is None or tcol is None:
+                skipped.append((f.name, f"no glucose/time column in {list(df.columns)[:6]}"))
+                continue
 
-        t = pd.to_datetime(df[tcol], errors="coerce")
-        g = pd.to_numeric(df[gcol], errors="coerce")
-        keep = t.notna() & g.notna()
-        if keep.sum() < 20:
-            skipped.append((f.name, f"only {int(keep.sum())} usable rows"))
-            continue
+            t = pd.to_datetime(df[tcol], errors="coerce")
+            g = pd.to_numeric(df[gcol], errors="coerce")
+            keep = t.notna() & g.notna()
+            if keep.sum() < 20:
+                skipped.append((f.name, f"only {int(keep.sum())} usable rows"))
+                continue
 
-        try:
-            g_mmol, unit = _to_mmol(g[keep].to_numpy(), f.name)
-        except ValueError as e:
-            skipped.append((f.name, str(e)))
-            continue
-        units_seen.add(unit)
+            try:
+                g_mmol, unit = _to_mmol(g[keep].to_numpy(), f.name)
+            except ValueError as e:
+                skipped.append((f.name, str(e)))
+                continue
+            units_seen.add(unit)
 
-        # Carbohydrate intake, if the workbook records it. Absent is fine: the
-        # twin then sees a patient with no logged meals rather than a fabricated
-        # meal schedule, which is the honest default.
-        ccol = find("dietary", "carbohydrate", "carb", "intake")
-        carbs = np.zeros(int(keep.sum()), dtype=float)
-        if ccol is not None:
-            raw = df[ccol][keep]
-            parsed = pd.to_numeric(raw, errors="coerce").fillna(0.0).to_numpy()
-            if parsed.sum() > 0:
-                carbs = parsed
-            else:
-                # Some releases log meals as free text rather than grams. Treat a
-                # non-empty entry as a typical meal instead of dropping it.
-                carbs = np.where(raw.astype(str).str.strip().ne("").to_numpy()
-                                 & raw.notna().to_numpy(), 60.0, 0.0)
+            ccol = find("dietary", "carbohydrate", "carb", "intake")
+            carbs = np.zeros(int(keep.sum()), dtype=float)
+            if ccol is not None:
+                raw = df[ccol][keep]
+                parsed = pd.to_numeric(raw, errors="coerce").fillna(0.0).to_numpy()
+                if parsed.sum() > 0:
+                    carbs = parsed
+                else:
+                    carbs = np.where(raw.astype(str).str.strip().ne("").to_numpy()
+                                     & raw.notna().to_numpy(), 60.0, 0.0)
 
-        tt = t[keep]
-        frames.append(pd.DataFrame({
-            "patient_id": f"{cohort}_{i:03d}",
-            "t_min": (tt - tt.iloc[0]).dt.total_seconds().to_numpy() / 60.0,
-            "glucose_mmol_l": g_mmol,
-            "meal_carbs_g": carbs,
-        }))
+            tt = t[keep]
+            t_min = (tt - tt.iloc[0]).dt.total_seconds().to_numpy() / 60.0
+            visit_frames.append(pd.DataFrame({
+                "t_min": t_min + t_offset,
+                "glucose_mmol_l": g_mmol,
+                "meal_carbs_g": carbs,
+            }))
+            # Next visit's clock continues after this one, with a gap so visits
+            # are never mistaken for continuous readings across a hospital stay.
+            t_offset += float(t_min[-1]) + 24 * 60.0
+
+        if visit_frames:
+            combined = pd.concat(visit_frames, ignore_index=True)
+            combined.insert(0, "patient_id", f"{cohort}_{pid}")
+            frames.append(combined)
 
     if verbose or skipped:
         print(f"  shanghai {cohort}: {len(frames)} patients loaded, "
