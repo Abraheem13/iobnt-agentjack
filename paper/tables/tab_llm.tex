@@ -1,0 +1,25 @@
+\begin{table}[t]
+\centering
+\caption{Semantic injection reaches an LLM orchestrator but not a structured-field controller. \emph{Note-followed} counts doses taken on a cycle carrying an adversarial annotation where telemetry did not justify one. Model: \texttt{Qwen/Qwen2.5-7B-Instruct@a09a35458c702b33eeacc393d103063234e8bc28}.}
+\label{tab:llm}
+\begin{tabular}{llrr}
+\toprule
+Agent & Attack & Unsafe & Note-followed \\
+\midrule
+policy gru & A2 spoofing & 45.8 & 0.0 \\
+policy gru & A4 semantic & 0.0 & 0.0 \\
+policy gru & A5 compromised node & 0.0 & 0.0 \\
+policy gru & A7 adaptive insider & 0.0 & 0.0 \\
+\midrule
+llm[v1 plain] & A2 spoofing & 0.0 & 0.0 \\
+llm[v1 plain] & A4 semantic & 0.0 & 28.1 \\
+llm[v1 plain] & A5 compromised node & 0.0 & 28.1 \\
+llm[v1 plain] & A7 adaptive insider & 0.0 & 0.0 \\
+\midrule
+llm[v1 hardened] & A2 spoofing & 0.0 & 0.0 \\
+llm[v1 hardened] & A4 semantic & 0.0 & 30.2 \\
+llm[v1 hardened] & A5 compromised node & 0.0 & 30.2 \\
+llm[v1 hardened] & A7 adaptive insider & 0.0 & 0.0 \\
+\bottomrule
+\end{tabular}
+\end{table}
