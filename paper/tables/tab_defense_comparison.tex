@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\caption{Unsafe actuation rate (\%) by attack and defense. Lower is better. Thresholds calibrated on benign traffic only; calibration and evaluation seeds disjoint.}
+\label{tab:defense-comparison}
+\begin{tabular}{lrrrr}
+\toprule
+Attack & none & D1 physical & D2 semantic & D3 nested \\
+\midrule
+A1 replay & 42.4 & \textbf{0.0} & 42.4 & \textbf{0.0} \\
+A2 spoofing & 44.8 & \textbf{0.0} & 44.8 & \textbf{0.0} \\
+A3 ISI-exploit & 16.6 & \textbf{0.0} & 15.9 & \textbf{0.0} \\
+A4 semantic & 0.0 & 0.0 & 0.0 & 0.0 \\
+A5 compromised node & 0.0 & 0.0 & 0.0 & 0.0 \\
+A6 insider replay & 38.2 & 37.2 & 38.2 & \textbf{0.0} \\
+A7 adaptive insider & 0.0 & 0.0 & 0.0 & 0.0 \\
+\bottomrule
+\end{tabular}
+\end{table}

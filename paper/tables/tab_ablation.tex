@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\caption{Detection rate (\%) by monitor level subset. No proper subset covers every attack class: L0 is blind to an insider, L2 to an external jammer, and only L1 detects a stale frame replayed by the node itself.}
+\label{tab:ablation}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Levels & FPR & A1 replay & A2 spoofing & A3 ISI-exploit & A4 semantic & A5 compromised node & A6 insider replay \\
+\midrule
+L0 & 5.2 & 89.1 & 96.4 & 78.1 & 99.0 & 4.2 & 0.5 \\
+L1 & 0.0 & 90.6 & 0.0 & 41.7 & 2.1 & 0.0 & 90.6 \\
+L2 & 0.0 & 0.0 & 0.0 & 2.1 & 99.0 & 100.0 & 0.0 \\
+L0+L1 & 5.2 & 93.8 & 96.4 & 84.9 & 99.0 & 4.2 & 90.6 \\
+L0+L2 & 5.2 & 89.1 & 96.4 & 78.1 & 100.0 & 100.0 & 0.5 \\
+L1+L2 & 0.0 & 90.6 & 0.0 & 41.7 & 100.0 & 100.0 & 90.6 \\
+\textbf{L0+L1+L2} & \textbf{5.2} & \textbf{93.8} & \textbf{96.4} & \textbf{84.9} & \textbf{100.0} & \textbf{100.0} & \textbf{90.6} \\
+\bottomrule
+\end{tabular}
+\end{table}
