@@ -24,6 +24,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+import time
 from pathlib import Path
 
 import numpy as np
@@ -167,6 +168,11 @@ def main() -> int:
     ap.add_argument("--prompt", type=str, default="v1_plain",
                     choices=["v1_plain", "v1_hardened", "both"])
     ap.add_argument("--phrase-bits", type=int, default=6)
+    # The agent emits one short tool call. 48 tokens was generous; 16 is ample
+    # and cuts wall-clock roughly threefold.
+    ap.add_argument("--max-new-tokens", type=int, default=16)
+    ap.add_argument("--resume", action="store_true",
+                    help="skip cells already present in the checkpoint file")
     args = ap.parse_args()
 
     cgm, is_real = load_cgm_or_synthetic(seed=0)
@@ -190,7 +196,8 @@ def main() -> int:
         n_seeds, n_eps = 1, 1
     else:
         backend = HuggingFaceBackend(model_id=args.model, revision=args.revision,
-                                     device=args.device)
+                                     device=args.device,
+                                     max_new_tokens=args.max_new_tokens)
         prompts = ["v1_plain", "v1_hardened"] if args.prompt == "both" else [args.prompt]
         n_seeds, n_eps = args.seeds, args.episodes
         print(f"  backend      {backend.name}")
@@ -205,7 +212,20 @@ def main() -> int:
     controller.assert_trained(hist)
 
     calibrated = {n: calibrate(n, cgm, test_p, calib_seeds) for n in DEFENSES}
+    # Per-cell checkpointing. A GPU node vanished mid-run once already; without
+    # this, hours of generation are lost to a machine that goes away in the last
+    # cell. Each finished cell is written immediately and reloaded on --resume.
+    ckpt = Path("results/runs/e4_checkpoint.json")
+    ckpt.parent.mkdir(parents=True, exist_ok=True)
+    done = {}
+    if args.resume and ckpt.exists():
+        raw = json.loads(ckpt.read_text())
+        done = {tuple(k.split("|")): v for k, v in raw.items()}
+        print(f"  resuming: {len(done)} cells already complete\n", flush=True)
+
     results, reportable = {}, backend.is_real_model
+    t_start = time.time()
+    cell_i = 0
 
     for prompt_v in prompts:
         agents = {
@@ -218,6 +238,11 @@ def main() -> int:
                 continue
             for atk_name, (atk_f, inj_f) in ATTACKS.items():
                 for def_name in DEFENSES:
+                    cell_i += 1
+                    key = (agent_name, atk_name, def_name)
+                    if key in done:
+                        results[key] = done[key]
+                        continue
                     rows = []
                     for si in range(n_seeds):
                         for ei in range(n_eps):
@@ -232,7 +257,13 @@ def main() -> int:
                                 j.reset()
                                 tw.injector = j
                             rows.append(run_episode(tw, agent, calibrated[def_name]))
-                    results[(agent_name, atk_name, def_name)] = rows
+                    results[key] = rows
+                    done[key] = rows
+                    ckpt.write_text(json.dumps(
+                        {"|".join(k): v for k, v in done.items()}, indent=1))
+                    print(f"  [{cell_i:>3}] {agent_name:<16} {atk_name:<20} "
+                          f"{def_name:<14} {(time.time()-t_start)/60:6.1f} min",
+                          flush=True)
 
     print(f"  {'agent':<18} {'attack':<20} {'defense':<14} "
           f"{'unsafe':>8} {'TIR':>8} {'note-followed':>14}")
