@@ -51,12 +51,12 @@ for r in table("tab:supp-closed-loop"):
 print(f"{n} table cells checked, {bad} mismatches")
 # Selected prose numbers from the repository result files
 P = {"98.7": e2["none|none"]["tir_mean"], "32.0": e2["A1_replay|none"]["tir_mean"], "27.3": e2["A2_spoofing|none"]["tir_mean"], "67.9": e2["A3_isi_exploit|none"]["tir_mean"],
-     "38.0": e2["A6_insider_replay|none"]["tir_mean"], "74.3": e2["A6_insider_replay|D3_nested"]["veto_mean"], "31.0": e2["A7_adaptive_insider|D3_nested"]["veto_mean"],
+     "38.0": e2["A6_insider_replay|none"]["tir_mean"], "73.5": e2["A6_insider_replay|D3_nested"]["veto_mean"], "29.9": e2["A7_adaptive_insider|D3_nested"]["veto_mean"],
      "24.5": e2["A7_adaptive_insider|D2_semantic"]["veto_mean"], "7.4": e2["A7_adaptive_insider|D1_physical"]["veto_mean"], "7.1": e2["none|D1_physical"]["veto_mean"],
-     "8.4": e2["none|D3_nested"]["veto_mean"], "45.8": e4["policy_gru|A2_spoofing|none"]["unsafe_mean"], "90.3": e4["llm[v1_plain]|none|none"]["tir_mean"],
-     "83.5": e4["llm[v1_hardened]|none|none"]["tir_mean"], "97.9": e4["policy_gru|none|none"]["tir_mean"], "56.5": min(e2[f"{SHORT[a]}|D3_nested"]["veto_mean"] for a in ["A1","A2","A3","A4","A5","A6"]),
-     "83.3": max(e2[f"{SHORT[a]}|D3_nested"]["veto_mean"] for a in ["A1","A2","A3","A4","A5","A6"]), "91.6": min(e2[f"{SHORT[a]}|D3_nested"]["tir_mean"] for a in ["A1","A2","A3","A4","A5","A6"]),
-     "97.4": max(e2[f"{SHORT[a]}|D3_nested"]["tir_mean"] for a in ["A1","A2","A3","A4","A5","A6"]), "98.2": e2["A7_adaptive_insider|D3_nested"]["tir_mean"],
+     "54.1": s2["cells"]["expert|A1_replay|D3_nested"]["veto_mean"], "45.8": e4["policy_gru|A2_spoofing|none"]["unsafe_mean"], "90.3": e4["llm[v1_plain]|none|none"]["tir_mean"],
+     "83.5": e4["llm[v1_hardened]|none|none"]["tir_mean"], "97.9": e4["policy_gru|none|none"]["tir_mean"], "54.0": min(e2[f"{SHORT[a]}|D3_nested"]["veto_mean"] for a in ["A1","A2","A3","A4","A5","A6"]),
+     "82.1": max(e2[f"{SHORT[a]}|D3_nested"]["veto_mean"] for a in ["A1","A2","A3","A4","A5","A6"]), "91.6": min(e2[f"{SHORT[a]}|D3_nested"]["tir_mean"] for a in ["A1","A2","A3","A4","A5","A6"]),
+     "97.1": max(e2[f"{SHORT[a]}|D3_nested"]["tir_mean"] for a in ["A1","A2","A3","A4","A5","A6"]), "68.0": e2["A1_replay|none"]["below_3p9_mean"], "60.8": e2["A6_insider_replay|D1_physical"]["below_3p9_mean"],
      "98.1": min(e2[f"none|{d}"]["tir_mean"] for d in ["D1_physical","D2_semantic","D3_nested"])}
 pb = 0
 for shown, v in P.items():

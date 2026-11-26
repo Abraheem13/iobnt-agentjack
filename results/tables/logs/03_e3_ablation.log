@@ -1,0 +1,40 @@
+$ /Users/abraheemrashid/iobnt-agentjack/.venv/bin/python scripts/validate_defense.py
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+GATE 9 :: nested trust monitor
+
+  CGM source   REAL Shanghai
+  calibration  seeds 0-7 (BENIGN ONLY)
+  evaluation   seeds 100-105 (disjoint)
+
+  levels          FPR      A1 replay    A2 spoofing  A3 ISI-exploi    A4 semantic  A5 compromise  A6 insider re
+  L0            5.2%         89.1%          96.4%          78.1%          99.0%           4.2%           0.5% 
+  L1            0.0%         90.6%           0.0%          41.7%           2.1%           0.0%          90.6% 
+  L2            0.0%          0.0%           0.0%           2.1%          99.0%         100.0%           0.0% 
+  L0+L1         5.2%         93.8%          96.4%          84.9%          99.0%           4.2%          90.6% 
+  L0+L2         5.2%         89.1%          96.4%          78.1%         100.0%         100.0%           0.5% 
+  L1+L2         0.0%         90.6%           0.0%          41.7%         100.0%         100.0%          90.6% 
+  L0+L1+L2      5.2%         93.8%          96.4%          84.9%         100.0%         100.0%          90.6% 
+
+[PASS] 9a FPR held        max benign false-positive 5.2% (target 5%)
+[PASS] 9b disjoint failure  L0 and L2 each cover an attack the other misses
+[PASS] 9c full coverage    nested monitor detects every class (min 84.9%)
+[PASS] 9d nesting needed    no proper subset covers everything
+
+  attribution by the full monitor (which timescale fired):
+    A1 replay              L0 physical 93%, L1 message 7%
+    A2 spoofing            L0 physical 100%
+    A3 ISI-exploit         L0 physical 79%, L1 message 21%
+    A4 semantic            L0 physical 94%, L2 semantic 6%
+    A5 compromised node    L2 semantic 100%
+    A6 insider replay      L1 message 100%
+
+[PASS] 9e attribution       every detection names a timescale
+
+  wrote results/tables/e3_ablation.json
+
+GATE 9 PASSED. Day 12 (defense comparison at full seed count) is unblocked.

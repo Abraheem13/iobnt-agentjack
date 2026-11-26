@@ -1,0 +1,29 @@
+$ /Users/abraheemrashid/iobnt-agentjack/.venv/bin/python scripts/validate_channel_physics.py --no-figure
+GATE 1 :: channel physics validation
+
+parameters
+  asymptotic_absorption        0.25
+  characteristic_time_s        0.708438
+  T_s_over_characteristic      0.705778
+  h_first_slot                 0.0230756
+  captured_in_memory           0.137934
+  fraction_of_ceiling          0.551734
+  mean_counts_first_slot       184.605
+  isi_ratio                    4.97746
+
+[PASS] 1a integration    integral(f) = 0.17665225  vs  F(t) = 0.17665225   rel err 1.48e-13
+[PASS] 1b asymptote      F(t->inf) = 0.249894  vs  r_rx/d = 0.250000   rel err 4.25e-04
+[PASS] 1c monte carlo    worst |z| = 2.40 (limit 4.0), total-mass bias = +2.08% (limit +/-3%)
+
+  slot      analytic     monte-carlo      rel err        z
+     1      0.023076      0.023450        1.62%    +0.50
+     2      0.035404      0.037625        6.27%    +2.40
+     3      0.024296      0.023750        2.25%    -0.71
+     4      0.017215      0.017475        1.51%    +0.40
+     5      0.012898      0.012750        1.14%    -0.26
+     6      0.010095      0.011100        9.95%    +2.01
+     7      0.008169      0.007900        3.29%    -0.60
+     8      0.006781      0.006750        0.46%    -0.08
+
+
+GATE 1 PASSED. Day 2 (modulation, detection, ISI) is unblocked.

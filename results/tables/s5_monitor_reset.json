@@ -1,6 +1,6 @@
 {
  "meta": {
-  "cgm_is_real": false,
+  "cgm_is_real": true,
   "n_patients": 12,
   "episode_steps": 96,
   "episodes": 80,
@@ -9,26 +9,26 @@
  },
  "rows": {
   "D1_physical|reset": {
-   "veto_rate": 0.07473958333333333,
-   "vetoed_cycles": 574,
+   "veto_rate": 0.07135416666666666,
+   "vetoed_cycles": 548,
    "cycles": 7680,
    "episodes_with_first_cycle_vetoed": 8
   },
   "D1_physical|no_reset": {
-   "veto_rate": 0.07473958333333333,
-   "vetoed_cycles": 574,
+   "veto_rate": 0.07135416666666666,
+   "vetoed_cycles": 548,
    "cycles": 7680,
    "episodes_with_first_cycle_vetoed": 8
   },
   "D3_nested|reset": {
-   "veto_rate": 0.07473958333333333,
-   "vetoed_cycles": 574,
+   "veto_rate": 0.07083333333333333,
+   "vetoed_cycles": 544,
    "cycles": 7680,
    "episodes_with_first_cycle_vetoed": 8
   },
   "D3_nested|no_reset": {
-   "veto_rate": 0.08645833333333333,
-   "vetoed_cycles": 664,
+   "veto_rate": 0.084375,
+   "vetoed_cycles": 648,
    "cycles": 7680,
    "episodes_with_first_cycle_vetoed": 79
   }

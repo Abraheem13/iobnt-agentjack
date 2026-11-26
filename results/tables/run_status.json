@@ -1,0 +1,42 @@
+{
+  "00_channel_validation": {
+    "exit_code": 0,
+    "minutes": 0.4,
+    "command": "/Users/abraheemrashid/iobnt-agentjack/.venv/bin/python scripts/validate_channel_physics.py --no-figure"
+  },
+  "01_e1_efficacy": {
+    "exit_code": 0,
+    "minutes": 2.7,
+    "command": "/Users/abraheemrashid/iobnt-agentjack/.venv/bin/python scripts/run_e1.py --seeds 10 --episodes 8 --force"
+  },
+  "02_e2_defence": {
+    "exit_code": 0,
+    "minutes": 2.1,
+    "command": "/Users/abraheemrashid/iobnt-agentjack/.venv/bin/python scripts/run_e2.py --seeds 10 --episodes 8"
+  },
+  "03_e3_ablation": {
+    "exit_code": 0,
+    "minutes": 0.1,
+    "command": "/Users/abraheemrashid/iobnt-agentjack/.venv/bin/python scripts/validate_defense.py"
+  },
+  "04_supplementary": {
+    "exit_code": 0,
+    "minutes": 5.3,
+    "command": "/Users/abraheemrashid/iobnt-agentjack/.venv/bin/python scripts/run_supplementary.py s1 s2 s3 s4 s5"
+  },
+  "05_supp_figures": {
+    "exit_code": 0,
+    "minutes": 0.1,
+    "command": "/Users/abraheemrashid/iobnt-agentjack/.venv/bin/python scripts/make_supplementary_figures.py results/tables results/figures ."
+  },
+  "07_figures": {
+    "exit_code": 0,
+    "minutes": 0.0,
+    "command": "/Users/abraheemrashid/iobnt-agentjack/.venv/bin/python scripts/make_figures.py"
+  },
+  "08_tables": {
+    "exit_code": 0,
+    "minutes": 0.0,
+    "command": "/Users/abraheemrashid/iobnt-agentjack/.venv/bin/python scripts/make_tables.py"
+  }
+}

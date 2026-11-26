@@ -1,6 +1,6 @@
 {
  "meta": {
-  "cgm_is_real": false,
+  "cgm_is_real": true,
   "n_patients": 12,
   "episode_steps": 32,
   "episodes": 40,
@@ -23,20 +23,20 @@
   "5": {
    "phrase_addressable": true,
    "cycles": 1280,
-   "cycles_delivered": 1280,
-   "delivery": 1.0
+   "cycles_delivered": 1270,
+   "delivery": 0.9921875
   },
   "6": {
    "phrase_addressable": true,
    "cycles": 1280,
-   "cycles_delivered": 1274,
-   "delivery": 0.9953125
+   "cycles_delivered": 1262,
+   "delivery": 0.9859375
   },
   "7": {
    "phrase_addressable": true,
    "cycles": 1280,
-   "cycles_delivered": 1279,
-   "delivery": 0.99921875
+   "cycles_delivered": 1275,
+   "delivery": 0.99609375
   }
  }
 }

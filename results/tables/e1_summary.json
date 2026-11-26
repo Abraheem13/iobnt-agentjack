@@ -4,11 +4,11 @@
     "n": 10
   },
   "A1_replay|full_cir": {
-    "unsafe_mean": 0.27838541666666666,
+    "unsafe_mean": 0.27734375,
     "n": 10
   },
   "A1_replay|statistical": {
-    "unsafe_mean": 0.27083333333333337,
+    "unsafe_mean": 0.27005208333333336,
     "n": 10
   },
   "A2_spoofing|blind": {
@@ -16,7 +16,7 @@
     "n": 10
   },
   "A2_spoofing|full_cir": {
-    "unsafe_mean": 0.25924479166666664,
+    "unsafe_mean": 0.2578125,
     "n": 10
   },
   "A2_spoofing|statistical": {
