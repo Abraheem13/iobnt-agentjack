@@ -1,0 +1,10 @@
+{
+  "cgm_is_real": true,
+  "seeds": 10,
+  "episodes_per_seed": 8,
+  "episodes_per_cell": 80,
+  "held_out_patients": 4,
+  "episode_length": 96,
+  "monitor_reset_per_episode": true,
+  "command": "scripts/run_e2.py --seeds 10 --episodes 8"
+}

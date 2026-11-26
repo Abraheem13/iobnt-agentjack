@@ -1,0 +1,10 @@
+{
+  "cgm_is_real": true,
+  "seeds": 10,
+  "episodes_per_seed": 8,
+  "run_records": 130,
+  "episodes_per_record": [
+    8
+  ],
+  "command": "scripts/run_e1.py --seeds 10 --episodes 8 --force"
+}

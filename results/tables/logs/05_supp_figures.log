@@ -1,0 +1,3 @@
+$ /Users/abraheemrashid/iobnt-agentjack/.venv/bin/python scripts/make_supplementary_figures.py results/tables results/figures .
+figures written
+stealth 0.326 0.5

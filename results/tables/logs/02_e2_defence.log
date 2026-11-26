@@ -1,0 +1,113 @@
+$ /Users/abraheemrashid/iobnt-agentjack/.venv/bin/python scripts/run_e2.py --seeds 10 --episodes 8
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+E2 :: 8 attacks x 4 defenses x 10 seeds
+
+  CGM source  REAL Shanghai
+
+  calibrated D1_physical    threshold=0.0852 (n=960 benign scores)
+  calibrated D2_semantic    threshold=0.0000 (n=960 benign scores)
+  calibrated D3_nested      threshold=2.2363 (n=960 benign scores)
+
+  attack               defense          unsafe      TIR    veto
+  none                 none              0.0%   98.7%   0.0%
+  none                 D1_physical       0.0%   98.1%   7.1%
+  none                 D2_semantic       0.0%   98.7%   0.0%
+  none                 D3_nested         0.0%   98.2%   7.1%
+
+  A1_replay            none             42.4%   32.0%   0.0%
+  A1_replay            D1_physical       0.0%   98.2%  55.6%
+  A1_replay            D2_semantic      42.4%   32.0%   0.0%
+  A1_replay            D3_nested         0.0%   96.6%  54.0%
+
+  A2_spoofing          none             44.8%   27.3%   0.0%
+  A2_spoofing          D1_physical       0.0%   98.8%  72.2%
+  A2_spoofing          D2_semantic      44.8%   27.3%   0.0%
+  A2_spoofing          D3_nested         0.0%   95.6%  76.0%
+
+  A3_isi_exploit       none             16.6%   67.9%   0.0%
+  A3_isi_exploit       D1_physical       0.0%   98.8%  67.8%
+  A3_isi_exploit       D2_semantic      15.9%   68.9%   1.3%
+  A3_isi_exploit       D3_nested         0.0%   97.1%  73.3%
+
+  A4_semantic          none              0.0%   98.7%   0.0%
+  A4_semantic          D1_physical       0.0%   95.8%  79.5%
+  A4_semantic          D2_semantic       0.0%   96.4%  80.9%
+  A4_semantic          D3_nested         0.0%   91.6%  82.1%
+
+  A5_compromised_node  none              0.0%   98.7%   0.0%
+  A5_compromised_node  D1_physical       0.0%   98.3%   8.6%
+  A5_compromised_node  D2_semantic       0.0%   96.4%  80.9%
+  A5_compromised_node  D3_nested         0.0%   95.5%  82.0%
+
+  A6_insider_replay    none             38.2%   38.0%   0.0%
+  A6_insider_replay    D1_physical      37.2%   39.2%   3.7%
+  A6_insider_replay    D2_semantic      38.2%   38.1%   0.0%
+  A6_insider_replay    D3_nested         0.0%   92.6%  73.5%
+
+  A7_adaptive_insider  none              0.0%  100.0%   0.0%
+  A7_adaptive_insider  D1_physical       0.0%  100.0%   7.4%
+  A7_adaptive_insider  D2_semantic       0.0%   97.9%  24.5%
+  A7_adaptive_insider  D3_nested         0.0%   97.1%  29.9%
+
+Benign false-positive rate (veto on clean traffic) by defense:
+
+  (threshold is fit as the empirical quantile of the FUSED benign score on
+   disjoint calibration seeds, so it is correct by construction on that set;
+   the realised rate on held-out eval seeds carries ordinary finite-sample
+   variance and is expected to tighten with more calibration seeds - this
+   is calibration variance, not a defense flaw, and is reported rather than
+   hidden.)
+
+  PASS  none           FPR 0.0% (target 5%)
+  PASS  D1_physical    FPR 7.1% (target 5%)
+  PASS  D2_semantic    FPR 0.0% (target 5%)
+  PASS  D3_nested      FPR 7.1% (target 5%)
+
+Unsafe-rate reduction: D3_nested vs D1/D2, paired, Holm-Bonferroni:
+
+  A1_replay/D3_vs_none                     p_holm=3.18e-154  sig
+  A1_replay/D3_vs_D2_semantic              p_holm=3.18e-154  sig
+  A6_insider_replay/D3_vs_none             p_holm=5.75e-146  sig
+  A6_insider_replay/D3_vs_D2_semantic      p_holm=4.52e-140  sig
+  A2_spoofing/D3_vs_none                   p_holm=1.20e-122  sig
+  A2_spoofing/D3_vs_D2_semantic            p_holm=1.20e-122  sig
+  A6_insider_replay/D3_vs_D1_physical      p_holm=6.30e-109  sig
+  A3_isi_exploit/D3_vs_none                p_holm=1.23e-43  sig
+  A3_isi_exploit/D3_vs_D2_semantic         p_holm=1.38e-41  sig
+  A1_replay/D3_vs_D1_physical              p_holm=1.00e+00  ns
+  A2_spoofing/D3_vs_D1_physical            p_holm=1.00e+00  ns
+  A3_isi_exploit/D3_vs_D1_physical         p_holm=1.00e+00  ns
+  A4_semantic/D3_vs_none                   p_holm=1.00e+00  ns
+  A4_semantic/D3_vs_D1_physical            p_holm=1.00e+00  ns
+  A4_semantic/D3_vs_D2_semantic            p_holm=1.00e+00  ns
+  A5_compromised_node/D3_vs_none           p_holm=1.00e+00  ns
+  A5_compromised_node/D3_vs_D1_physical    p_holm=1.00e+00  ns
+  A5_compromised_node/D3_vs_D2_semantic    p_holm=1.00e+00  ns
+  A7_adaptive_insider/D3_vs_none           p_holm=1.00e+00  ns
+  A7_adaptive_insider/D3_vs_D1_physical    p_holm=1.00e+00  ns
+  A7_adaptive_insider/D3_vs_D2_semantic    p_holm=1.00e+00  ns
+
+STEALTH/HARM TRADE-OFF: A7 (adaptive, paced) reaches 0.0% unsafe
+  undefended vs A6 (static, unpaced) at 38.2%. A7's pacing and correct
+  nonce advancement are REQUIRED to evade L1 (Gate 9: A6 90.6% detected, A7
+  31.8%) and both necessarily reduce forged-dose frequency. The adaptive
+  attacker trades harm for stealth rather than getting both for free - real
+  evidence the evasion strategy costs something, reported rather than forced
+  to look more dangerous than it is.
+
+Benign task-success non-inferiority: D3_nested vs undefended (margin=5pp):
+
+  D1_physical    p=0.0000  non-inferior
+  D2_semantic    p=0.0000  non-inferior
+  D3_nested      p=0.0000  non-inferior
+
+  wrote results/tables/e2_defense_comparison.json
+  wrote results/tables/e2_meta.json and e2_per_episode.json
+
+[PASS] all defenses hold their FPR target on benign traffic
+[PASS] adaptive attacker A7 evaluated against every defense

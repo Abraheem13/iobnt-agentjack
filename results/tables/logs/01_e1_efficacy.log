@@ -1,0 +1,951 @@
+$ /Users/abraheemrashid/iobnt-agentjack/.venv/bin/python scripts/run_e1.py --seeds 10 --episodes 8 --force
+E1 :: 130 cells (10 seeds x 5 attacks)
+
+  [  1/130] none            statistical  seed 0
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [  2/130] A1_replay       blind        seed 0
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [  3/130] A1_replay       statistical  seed 0
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [  4/130] A1_replay       full_cir     seed 0
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [  5/130] A2_spoofing     blind        seed 0
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [  6/130] A2_spoofing     statistical  seed 0
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [  7/130] A2_spoofing     full_cir     seed 0
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [  8/130] A3_isi_exploit  blind        seed 0
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [  9/130] A3_isi_exploit  statistical  seed 0
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 10/130] A3_isi_exploit  full_cir     seed 0
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 11/130] A4_semantic     blind        seed 0
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 12/130] A4_semantic     statistical  seed 0
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 13/130] A4_semantic     full_cir     seed 0
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 14/130] none            statistical  seed 1
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 15/130] A1_replay       blind        seed 1
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 16/130] A1_replay       statistical  seed 1
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 17/130] A1_replay       full_cir     seed 1
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 18/130] A2_spoofing     blind        seed 1
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 19/130] A2_spoofing     statistical  seed 1
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 20/130] A2_spoofing     full_cir     seed 1
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 21/130] A3_isi_exploit  blind        seed 1
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 22/130] A3_isi_exploit  statistical  seed 1
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 23/130] A3_isi_exploit  full_cir     seed 1
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 24/130] A4_semantic     blind        seed 1
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 25/130] A4_semantic     statistical  seed 1
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 26/130] A4_semantic     full_cir     seed 1
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 27/130] none            statistical  seed 2
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 28/130] A1_replay       blind        seed 2
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 29/130] A1_replay       statistical  seed 2
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 30/130] A1_replay       full_cir     seed 2
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 31/130] A2_spoofing     blind        seed 2
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 32/130] A2_spoofing     statistical  seed 2
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 33/130] A2_spoofing     full_cir     seed 2
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 34/130] A3_isi_exploit  blind        seed 2
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 35/130] A3_isi_exploit  statistical  seed 2
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 36/130] A3_isi_exploit  full_cir     seed 2
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 37/130] A4_semantic     blind        seed 2
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 38/130] A4_semantic     statistical  seed 2
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 39/130] A4_semantic     full_cir     seed 2
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 40/130] none            statistical  seed 3
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 41/130] A1_replay       blind        seed 3
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 42/130] A1_replay       statistical  seed 3
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 43/130] A1_replay       full_cir     seed 3
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 44/130] A2_spoofing     blind        seed 3
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 45/130] A2_spoofing     statistical  seed 3
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 46/130] A2_spoofing     full_cir     seed 3
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 47/130] A3_isi_exploit  blind        seed 3
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 48/130] A3_isi_exploit  statistical  seed 3
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 49/130] A3_isi_exploit  full_cir     seed 3
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 50/130] A4_semantic     blind        seed 3
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 51/130] A4_semantic     statistical  seed 3
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 52/130] A4_semantic     full_cir     seed 3
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 53/130] none            statistical  seed 4
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 54/130] A1_replay       blind        seed 4
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 55/130] A1_replay       statistical  seed 4
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 56/130] A1_replay       full_cir     seed 4
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 57/130] A2_spoofing     blind        seed 4
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 58/130] A2_spoofing     statistical  seed 4
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 59/130] A2_spoofing     full_cir     seed 4
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 60/130] A3_isi_exploit  blind        seed 4
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 61/130] A3_isi_exploit  statistical  seed 4
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 62/130] A3_isi_exploit  full_cir     seed 4
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 63/130] A4_semantic     blind        seed 4
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 64/130] A4_semantic     statistical  seed 4
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 65/130] A4_semantic     full_cir     seed 4
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 66/130] none            statistical  seed 5
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 67/130] A1_replay       blind        seed 5
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 68/130] A1_replay       statistical  seed 5
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 69/130] A1_replay       full_cir     seed 5
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 70/130] A2_spoofing     blind        seed 5
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 71/130] A2_spoofing     statistical  seed 5
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 72/130] A2_spoofing     full_cir     seed 5
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 73/130] A3_isi_exploit  blind        seed 5
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 74/130] A3_isi_exploit  statistical  seed 5
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 75/130] A3_isi_exploit  full_cir     seed 5
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 76/130] A4_semantic     blind        seed 5
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 77/130] A4_semantic     statistical  seed 5
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 78/130] A4_semantic     full_cir     seed 5
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 79/130] none            statistical  seed 6
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 80/130] A1_replay       blind        seed 6
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 81/130] A1_replay       statistical  seed 6
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 82/130] A1_replay       full_cir     seed 6
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 83/130] A2_spoofing     blind        seed 6
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 84/130] A2_spoofing     statistical  seed 6
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 85/130] A2_spoofing     full_cir     seed 6
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 86/130] A3_isi_exploit  blind        seed 6
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 87/130] A3_isi_exploit  statistical  seed 6
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 88/130] A3_isi_exploit  full_cir     seed 6
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 89/130] A4_semantic     blind        seed 6
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 90/130] A4_semantic     statistical  seed 6
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 91/130] A4_semantic     full_cir     seed 6
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 92/130] none            statistical  seed 7
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 93/130] A1_replay       blind        seed 7
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 94/130] A1_replay       statistical  seed 7
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 95/130] A1_replay       full_cir     seed 7
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 96/130] A2_spoofing     blind        seed 7
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 97/130] A2_spoofing     statistical  seed 7
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 98/130] A2_spoofing     full_cir     seed 7
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [ 99/130] A3_isi_exploit  blind        seed 7
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [100/130] A3_isi_exploit  statistical  seed 7
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [101/130] A3_isi_exploit  full_cir     seed 7
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [102/130] A4_semantic     blind        seed 7
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [103/130] A4_semantic     statistical  seed 7
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [104/130] A4_semantic     full_cir     seed 7
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [105/130] none            statistical  seed 8
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [106/130] A1_replay       blind        seed 8
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [107/130] A1_replay       statistical  seed 8
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [108/130] A1_replay       full_cir     seed 8
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [109/130] A2_spoofing     blind        seed 8
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [110/130] A2_spoofing     statistical  seed 8
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [111/130] A2_spoofing     full_cir     seed 8
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [112/130] A3_isi_exploit  blind        seed 8
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [113/130] A3_isi_exploit  statistical  seed 8
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [114/130] A3_isi_exploit  full_cir     seed 8
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [115/130] A4_semantic     blind        seed 8
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [116/130] A4_semantic     statistical  seed 8
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [117/130] A4_semantic     full_cir     seed 8
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [118/130] none            statistical  seed 9
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [119/130] A1_replay       blind        seed 9
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [120/130] A1_replay       statistical  seed 9
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [121/130] A1_replay       full_cir     seed 9
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [122/130] A2_spoofing     blind        seed 9
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [123/130] A2_spoofing     statistical  seed 9
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [124/130] A2_spoofing     full_cir     seed 9
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [125/130] A3_isi_exploit  blind        seed 9
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [126/130] A3_isi_exploit  statistical  seed 9
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [127/130] A3_isi_exploit  full_cir     seed 9
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [128/130] A4_semantic     blind        seed 9
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [129/130] A4_semantic     statistical  seed 9
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+  [130/130] A4_semantic     full_cir     seed 9
+  shanghai T1DM: 12 patients loaded, 16 skipped, units seen: ['mg/dL']
+    skipped ._1001_0_20210730.xlsx: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_0_20210504.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_1_20210521.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1002_2_20210909.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+    skipped ._1003_0_20210831.xls: unreadable: Excel file format cannot be determined, you must specify an engine manually.
+
+  results (mean over seeds, held-out patients)
+
+  attack           knowledge      unsafe           95% CI   accept  peak exc   hypo
+  A1_replay        blind           0.1% [  0.0%,  0.2%]   23.3%      0.75    0.3
+  A1_replay        full_cir       27.7% [ 17.4%, 35.8%]   91.7%      0.55   45.1
+  A1_replay        statistical    27.0% [ 16.9%, 35.0%]   90.2%      0.55   44.2
+  A2_spoofing      blind           0.1% [  0.0%,  0.3%]   28.1%      0.91    0.5
+  A2_spoofing      full_cir       25.8% [ 15.5%, 35.6%]   95.6%      0.58   42.1
+  A2_spoofing      statistical    25.2% [ 15.2%, 34.9%]   94.3%      0.58   41.7
+  A3_isi_exploit   blind           0.0% [  0.0%,  0.0%]    0.0%      0.00    0.0
+  A3_isi_exploit   full_cir        9.6% [  5.4%, 13.8%]   57.9%      0.24   17.9
+  A3_isi_exploit   statistical    10.2% [  5.7%, 15.0%]   58.6%      0.23   19.9
+  A4_semantic      blind           0.0% [  0.0%,  0.0%]    0.0%      0.00    0.0
+  A4_semantic      full_cir        0.0% [  0.0%,  0.0%]   84.0%      0.51    0.0
+  A4_semantic      statistical     0.0% [  0.0%,  0.0%]   83.0%      0.51    0.0
+  none             statistical     0.0% [  0.0%,  0.0%]    0.0%      0.00    0.0
+
+  paired vs benign baseline, Holm-Bonferroni over the whole family
+
+  comparison                              p_raw     p_holm        g   sig
+  A1_replay/full_cir                   3.15e-04   3.78e-03     1.63   yes
+  A1_replay/statistical                3.46e-04   3.81e-03     1.61   yes
+  A2_spoofing/full_cir                 1.06e-03   1.06e-02     1.37   yes
+  A2_spoofing/statistical              1.06e-03   1.06e-02     1.37   yes
+  A3_isi_exploit/full_cir              2.27e-03   1.82e-02     1.22   yes
+  A3_isi_exploit/statistical           2.58e-03   1.82e-02     1.19   yes
+  A2_spoofing/blind                    9.32e-02   5.59e-01     0.54    no
+  A1_replay/blind                      1.77e-01   8.86e-01     0.42    no
+  A3_isi_exploit/blind                 1.00e+00   1.00e+00     0.00    no
+  A4_semantic/blind                    1.00e+00   1.00e+00     0.00    no
+  A4_semantic/full_cir                 1.00e+00   1.00e+00     0.00    no
+  A4_semantic/statistical              1.00e+00   1.00e+00     0.00    no
+
+[PASS] G3 informative   strongest attack 27.7%, headroom band 2%-85%
+
+  wrote results/tables/e1_summary.json
+  wrote results/tables/e1_meta.json and e1_per_run.json
