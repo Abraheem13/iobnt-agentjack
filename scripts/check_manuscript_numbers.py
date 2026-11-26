@@ -32,7 +32,8 @@ for r in table("tab:defence-comparison"):
 # Table: ablation (e3)
 E3 = ["fpr", "A1 replay", "A2 spoofing", "A3 ISI-exploit", "A4 semantic", "A5 compromised node", "A6 insider replay"]
 for r in table("tab:ablation"):
-    for col, k in zip(r[1:], E3): chk(f"e3 {r[0]} {k}", col, e3[r[0]][k])
+    lev = re.sub(r"\\bm|[$_{}]", "", r[0])
+    for col, k in zip(r[1:], E3): chk(f"e3 {lev} {k}", col, e3[lev][k])
 # Table: language model (e4)
 AG = {"controller": "policy_gru", "LLM, plain prompt": "llm[v1_plain]", "LLM, hardened": "llm[v1_hardened]"}
 for r in table("tab:llm"):
