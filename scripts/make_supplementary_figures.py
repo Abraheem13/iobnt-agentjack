@@ -18,7 +18,7 @@ ax[1].set_ylabel("annotation\ndelivery (%)"); ax[1].set_xlabel("annotation index
 fig.tight_layout(); fig.savefig(OUT / "fig_symbol_budget.pdf", bbox_inches="tight"); plt.close(fig)
 
 t = s1["traffic"]; pts = [("A1_replay", "A1 replay"), ("A2_spoofing", "A2 spoofing"), ("A3_isi_exploit", "A3 ISI-exploit"), ("A4_semantic", "A4 semantic"), ("A9_zero_slot_spoofing", "A9 zero-slot spoofing")]
-off = {"A1_replay": (8, -12), "A2_spoofing": (6, 7), "A3_isi_exploit": (8, 4), "A4_semantic": (-48, 9), "A9_zero_slot_spoofing": (-78, -15)}
+off = {"A1_replay": (8, -12), "A2_spoofing": (8, 2), "A3_isi_exploit": (8, 4), "A4_semantic": (-24, 11), "A9_zero_slot_spoofing": (-104, -3)}
 fig, ax = plt.subplots(figsize=(4.8, 3.4))
 for i, (k, lab) in enumerate(pts):
     x, y = t[k]["peak_excess"], 100 * t[k]["late_frame_valid_crc"]
