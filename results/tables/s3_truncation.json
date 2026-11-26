@@ -1,0 +1,45 @@
+{
+ "meta": {
+  "frame_slots": 46,
+  "frames": 20000,
+  "stream_bits": 60000,
+  "receiver_taps": 8
+ },
+ "rows": {
+  "8": {
+   "mass_retained_vs_ceiling": 0.5517344374807878,
+   "stream_ber_8tap_receiver": 0.0009166666666666666,
+   "stream_ber_matched_receiver": 0.0009166666666666666,
+   "isolated_frame_success_8tap_receiver": 0.9917,
+   "isolated_frame_success_matched_receiver": 0.9917
+  },
+  "16": {
+   "mass_retained_vs_ceiling": 0.6738690868822889,
+   "stream_ber_8tap_receiver": 0.23953333333333332,
+   "stream_ber_matched_receiver": 0.0019833333333333335,
+   "isolated_frame_success_8tap_receiver": 0.0,
+   "isolated_frame_success_matched_receiver": 0.9831
+  },
+  "32": {
+   "mass_retained_vs_ceiling": 0.7660225489492087,
+   "stream_ber_8tap_receiver": 0.2865,
+   "stream_ber_matched_receiver": 0.00365,
+   "isolated_frame_success_8tap_receiver": 0.0,
+   "isolated_frame_success_matched_receiver": 0.97355
+  },
+  "64": {
+   "mass_retained_vs_ceiling": 0.8333383701078678,
+   "stream_ber_8tap_receiver": 0.30438333333333334,
+   "stream_ber_matched_receiver": 0.00365,
+   "isolated_frame_success_8tap_receiver": 0.0,
+   "isolated_frame_success_matched_receiver": 0.9723
+  },
+  "128": {
+   "mass_retained_vs_ceiling": 0.881718725456293,
+   "stream_ber_8tap_receiver": 0.31256666666666666,
+   "stream_ber_matched_receiver": 0.005866666666666667,
+   "isolated_frame_success_8tap_receiver": 0.0,
+   "isolated_frame_success_matched_receiver": 0.9724
+  }
+ }
+}

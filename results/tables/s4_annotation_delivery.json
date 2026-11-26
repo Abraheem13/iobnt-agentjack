@@ -1,0 +1,42 @@
+{
+ "meta": {
+  "cgm_is_real": false,
+  "n_patients": 12,
+  "episode_steps": 32,
+  "episodes": 40,
+  "attack": "A4 always on, full CIR",
+  "denominator": "all decision cycles"
+ },
+ "rows": {
+  "3": {
+   "phrase_addressable": false,
+   "cycles": 1280,
+   "cycles_delivered": 0,
+   "delivery": 0.0
+  },
+  "4": {
+   "phrase_addressable": false,
+   "cycles": 1280,
+   "cycles_delivered": 0,
+   "delivery": 0.0
+  },
+  "5": {
+   "phrase_addressable": true,
+   "cycles": 1280,
+   "cycles_delivered": 1280,
+   "delivery": 1.0
+  },
+  "6": {
+   "phrase_addressable": true,
+   "cycles": 1280,
+   "cycles_delivered": 1274,
+   "delivery": 0.9953125
+  },
+  "7": {
+   "phrase_addressable": true,
+   "cycles": 1280,
+   "cycles_delivered": 1279,
+   "delivery": 0.99921875
+  }
+ }
+}
