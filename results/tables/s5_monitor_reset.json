@@ -1,0 +1,36 @@
+{
+ "meta": {
+  "cgm_is_real": false,
+  "n_patients": 12,
+  "episode_steps": 96,
+  "episodes": 80,
+  "agent": "expert",
+  "attack": "none"
+ },
+ "rows": {
+  "D1_physical|reset": {
+   "veto_rate": 0.07473958333333333,
+   "vetoed_cycles": 574,
+   "cycles": 7680,
+   "episodes_with_first_cycle_vetoed": 8
+  },
+  "D1_physical|no_reset": {
+   "veto_rate": 0.07473958333333333,
+   "vetoed_cycles": 574,
+   "cycles": 7680,
+   "episodes_with_first_cycle_vetoed": 8
+  },
+  "D3_nested|reset": {
+   "veto_rate": 0.07473958333333333,
+   "vetoed_cycles": 574,
+   "cycles": 7680,
+   "episodes_with_first_cycle_vetoed": 8
+  },
+  "D3_nested|no_reset": {
+   "veto_rate": 0.08645833333333333,
+   "vetoed_cycles": 664,
+   "cycles": 7680,
+   "episodes_with_first_cycle_vetoed": 79
+  }
+ }
+}

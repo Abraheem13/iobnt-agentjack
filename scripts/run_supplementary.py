@@ -21,7 +21,7 @@ from pathlib import Path
 import numpy as np
 
 ap = argparse.ArgumentParser()
-ap.add_argument("parts", nargs="*", default=["s1", "s2", "s3", "s4"])
+ap.add_argument("parts", nargs="*", default=["s1", "s2", "s3", "s4", "s5"])
 ap.add_argument("--repo", default=str(Path(__file__).resolve().parents[1]))
 ap.add_argument("--out", default=None)
 ap.add_argument("--smoke", action="store_true")
@@ -300,5 +300,36 @@ def s4():
     json.dump(out, open(OUT / "s4_annotation_delivery.json", "w"), indent=1)
 
 
+# ---------------------------------------------------------------- s5
+def s5():
+    """Effect of not resetting the monitor between evaluation episodes (as in run_e2.py / run_e4_llm.py).
+
+    Benign traffic, rule-based expert, same design as s2. Reports the veto rate and how many
+    episodes have their first cycle vetoed, with and without a per-episode reset.
+    """
+    EP = 96
+    split = max(1, int(0.7 * len(PIDS))); test_p = PIDS[split:]
+    blocks, per_block = (2, 4) if args.smoke else (10, 8)
+    seeds = [1000 + si * 100 + ei for si in range(blocks) for ei in range(per_block)]
+    out = {"meta": {**META, "episode_steps": EP, "episodes": len(seeds), "agent": "expert", "attack": "none"}, "rows": {}}
+    for d_name in ("D1_physical", "D3_nested"):
+        for do_reset in (True, False):
+            d = calibrate(d_name, test_p, list(range(10)), EP); d.reset()
+            vt = first = 0
+            for seed in seeds:
+                tw = twin(test_p, seed, EP)
+                if do_reset: d.reset()
+                obs = tw.reset(glucose0=9.0); k = 0
+                while True:
+                    veto = bool(d.decide(tw, obs).veto); vt += int(veto); first += int(veto and k == 0)
+                    r = tw.step(expert_action(obs) if not veto else "none", veto=veto, vetoed_by=d.name if veto else None)
+                    obs = r.observation; k += 1
+                    if r.done: break
+            row = {"veto_rate": vt / (len(seeds) * EP), "vetoed_cycles": vt, "cycles": len(seeds) * EP, "episodes_with_first_cycle_vetoed": first}
+            out["rows"][f"{d_name}|{'reset' if do_reset else 'no_reset'}"] = row
+            print("s5", d_name, "reset" if do_reset else "no_reset", row, flush=True)
+    json.dump(out, open(OUT / "s5_monitor_reset.json", "w"), indent=1)
+
+
 for part in args.parts:
-    t0 = time.time(); {"s1": s1, "s2": s2, "s3": s3, "s4": s4}[part](); print(part, "done in", round(time.time() - t0), "s", flush=True)
+    t0 = time.time(); {"s1": s1, "s2": s2, "s3": s3, "s4": s4, "s5": s5}[part](); print(part, "done in", round(time.time() - t0), "s", flush=True)
