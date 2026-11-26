@@ -1,0 +1,9 @@
+$ /Users/abraheemrashid/iobnt-agentjack/.venv/bin/python scripts/make_figures.py
+regenerating figures into results/figures
+
+  wrote results/figures/fig2_e1_attack_efficacy.pdf
+  wrote results/figures/fig4_e2_defense_matrix.pdf
+  wrote results/figures/fig5_e3_ablation.pdf
+  wrote results/figures/fig6_e4_llm.pdf
+
+  fig1 (channel validation) is written by scripts/validate_channel_physics.py

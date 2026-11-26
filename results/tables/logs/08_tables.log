@@ -1,0 +1,9 @@
+$ /Users/abraheemrashid/iobnt-agentjack/.venv/bin/python scripts/make_tables.py
+regenerating LaTeX tables into paper/tables
+
+  wrote paper/tables/tab_attack_efficacy.tex
+  wrote paper/tables/tab_defense_comparison.tex
+  wrote paper/tables/tab_ablation.tex
+  wrote paper/tables/tab_llm.tex
+
+  \input{tables/<name>} these from paper/main.tex - never retype a number

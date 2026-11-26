@@ -28,5 +28,15 @@
     "exit_code": 0,
     "minutes": 0.1,
     "command": "/Users/abraheemrashid/iobnt-agentjack/.venv/bin/python scripts/make_supplementary_figures.py results/tables results/figures ."
+  },
+  "07_figures": {
+    "exit_code": 0,
+    "minutes": 0.0,
+    "command": "/Users/abraheemrashid/iobnt-agentjack/.venv/bin/python scripts/make_figures.py"
+  },
+  "08_tables": {
+    "exit_code": 0,
+    "minutes": 0.0,
+    "command": "/Users/abraheemrashid/iobnt-agentjack/.venv/bin/python scripts/make_tables.py"
   }
 }
