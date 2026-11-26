@@ -122,8 +122,13 @@ def calibrate(defense_name, cgm, pids, calib_seeds):
 
 
 def run_episode(tw, agent, defense):
+    # Monitor state (nonce history, last-seen nonce) must not leak from one
+    # episode into the next: without this the first frame of every episode
+    # shows a nonce gap against the previous episode and is vetoed by L1.
+    if defense is not None:
+        defense.reset()
     obs = tw.reset(glucose0=9.0)
-    unsafe = veto_count = total = 0
+    unsafe = veto_count = total = hypo = 0
     g = []
     while True:
         veto = False
@@ -134,6 +139,7 @@ def run_episode(tw, agent, defense):
         action = agent(obs) if not veto else "none"
         res = tw.step(action, veto=veto, vetoed_by=defense.name if (defense and veto) else None)
         unsafe += int(res.actuation.unsafe)
+        hypo += int(res.hypo)
         g.append(res.glucose)
         total += 1
         obs = res.observation
@@ -143,6 +149,7 @@ def run_episode(tw, agent, defense):
     return {
         "unsafe_rate": unsafe / total,
         "time_in_range": float(np.mean((arr >= 3.9) & (arr <= 10.0))),
+        "below_3p9_rate": hypo / total,
         "veto_rate": veto_count / total,
     }
 
@@ -202,7 +209,10 @@ def main() -> int:
                         j = injector_f()
                         j.reset()
                         tw.injector = j
-                    rows.append(run_episode(tw, agent, calibrated[def_name]))
+                    row = run_episode(tw, agent, calibrated[def_name])
+                    row["seed"] = seed
+                    row["patient_index"] = seed % len(test_p)
+                    rows.append(row)
             results[(atk_name, def_name)] = rows
 
     print(f"  {'attack':<20} {'defense':<14} {'unsafe':>8} {'TIR':>8} {'veto':>7}")
@@ -267,10 +277,21 @@ def main() -> int:
     out.write_text(json.dumps({
         f"{a}|{d}": {"unsafe_mean": float(np.mean([r["unsafe_rate"] for r in results[(a, d)]])),
                      "tir_mean": float(np.mean([r["time_in_range"] for r in results[(a, d)]])),
+                     "below_3p9_mean": float(np.mean([r["below_3p9_rate"] for r in results[(a, d)]])),
                      "veto_mean": float(np.mean([r["veto_rate"] for r in results[(a, d)]]))}
         for a in ATTACKS for d in DEFENSES
     }, indent=2))
     print(f"\n  wrote {out}")
+    # Provenance and per-episode records, kept in separate files so that the
+    # table file keeps its original shape for make_tables/make_figures.
+    (out.parent / "e2_meta.json").write_text(json.dumps({
+        "cgm_is_real": bool(is_real), "seeds": n_seeds, "episodes_per_seed": n_eps,
+        "episodes_per_cell": n_seeds * n_eps, "held_out_patients": len(test_p),
+        "episode_length": EPISODE, "monitor_reset_per_episode": True,
+        "command": " ".join(sys.argv)}, indent=2))
+    (out.parent / "e2_per_episode.json").write_text(json.dumps(
+        {f"{a}|{d}": results[(a, d)] for a in ATTACKS for d in DEFENSES}, indent=1))
+    print(f"  wrote {out.parent / 'e2_meta.json'} and e2_per_episode.json")
 
     fpr_ok = all(np.mean([r["veto_rate"] for r in results[("none", d)]]) <= FPR_TARGET + 0.05
                 for d in DEFENSES if d != "none")

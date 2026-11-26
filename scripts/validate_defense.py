@@ -207,6 +207,10 @@ def main() -> int:
         {label(ls): {"fpr": fprs[ls]} | {n: table[ls][n][0] for n in names} for ls in subsets},
         indent=2))
     print(f"\n  wrote {out}")
+    (out.parent / "e3_meta.json").write_text(json.dumps({
+        "cgm_is_real": bool(is_real), "calibration_seeds": calib_seeds,
+        "evaluation_seeds": eval_seeds, "patients": len(pids),
+        "command": " ".join(sys.argv)}, indent=2))
 
     print()
     if all(results):
