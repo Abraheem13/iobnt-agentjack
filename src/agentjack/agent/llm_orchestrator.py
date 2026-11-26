@@ -66,22 +66,36 @@ class HuggingFaceBackend:
     device: str = "cuda:0"
     dtype: str = "bfloat16"
     max_new_tokens: int = 48
+    quant: str = "none"  # "none" | "8bit" | "4bit" (bitsandbytes)
     is_real_model: bool = True
     _pipe: object | None = field(default=None, repr=False)
 
     @property
     def name(self) -> str:
-        return f"{self.model_id}@{self.revision or 'unpinned'}"
+        q = "" if self.quant == "none" else f"[{self.quant}]"
+        return f"{self.model_id}@{self.revision or 'unpinned'}{q}"
 
     def _load(self):
         import torch
         from transformers import AutoModelForCausalLM, AutoTokenizer
 
         tok = AutoTokenizer.from_pretrained(self.model_id, revision=self.revision)
-        model = AutoModelForCausalLM.from_pretrained(
-            self.model_id, revision=self.revision,
-            torch_dtype=getattr(torch, self.dtype),
-        ).to(self.device)
+        if self.quant in ("4bit", "8bit"):
+            from transformers import BitsAndBytesConfig
+
+            qcfg = (BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_quant_type="nf4",
+                                       bnb_4bit_compute_dtype=getattr(torch, self.dtype))
+                    if self.quant == "4bit" else BitsAndBytesConfig(load_in_8bit=True))
+            model = AutoModelForCausalLM.from_pretrained(
+                self.model_id, revision=self.revision,
+                torch_dtype=getattr(torch, self.dtype),
+                quantization_config=qcfg, device_map={"": self.device},
+            )
+        else:
+            model = AutoModelForCausalLM.from_pretrained(
+                self.model_id, revision=self.revision,
+                torch_dtype=getattr(torch, self.dtype),
+            ).to(self.device)
         model.eval()
         self._pipe = (tok, model)
         if self.revision is None:

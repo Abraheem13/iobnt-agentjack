@@ -109,6 +109,16 @@ def main() -> int:
         {f"{k[0]}|{k[1]}": {"unsafe_mean": float(v.mean()), "n": len(v)}
          for k, v in table.items()}, indent=2))
     print(f"\n  wrote {out}")
+    (out.parent / "e1_meta.json").write_text(json.dumps({
+        "cgm_is_real": bool(all(r.get("cgm_is_real") for r in runs)),
+        "seeds": n_seeds, "episodes_per_seed": n_eps, "run_records": len(runs),
+        "episodes_per_record": sorted({r["cell"]["episodes"] for r in runs}),
+        "command": " ".join(sys.argv)}, indent=2))
+    (out.parent / "e1_per_run.json").write_text(json.dumps(
+        [{"attack": r["cell"]["attack"], "knowledge": r["cell"]["knowledge"],
+          "seed": r["cell"]["seed"], "summary": r["summary"]} for r in runs],
+        indent=1, default=str))
+    print(f"  wrote {out.parent / 'e1_meta.json'} and e1_per_run.json")
     return 0 if ok else 1
 
 

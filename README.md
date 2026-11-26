@@ -3,9 +3,8 @@
 **Molecular prompt injection against agentic bio-cyber interfaces, and a nested
 multi-timescale trust monitor for the Internet of Bio-Nano Things.**
 
-> Target venue: IEEE TMBMC Special Issue — *Agentic AI for Autonomous Bio-Cyber
-> Interfaces in Molecular Communications and IoBNT* (deadline 30 Dec 2026).
-> Status: **pre-alpha, under active 15-day construction.**
+> To regenerate every result in the paper with one command, see
+> **[docs/REPRODUCE.md](docs/REPRODUCE.md)**.
 
 ---
 
